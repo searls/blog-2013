@@ -6,12 +6,12 @@
     <div class="temporal">
       <span class="date"><%= post.date() %></span>
       <section class="navigation">
-        <% /* if !post.first() { */ %>
-          <span class="newer"><a href="#newer-post">&#8672;&nbsp;newer</a></span>
-        <% /* } */ %>
-        <% /* if !post.last() { */ %>
-          <span class="older"><a href="#older-post">older&nbsp;&#8674;</a></span>
-        <% /* } */ %>
+        <% if(site.newerPost(post)) { %>
+          <span class="newer"><a href="/<%= site.newerPost(post).htmlPath() %>">&#8672;&nbsp;newer</a></span>
+        <% } %>
+        <% if(site.olderPost(post)) { %>
+          <span class="older"><a href="/<%= site.olderPost(post).htmlPath() %>">older&nbsp;&#8674;</a></span>
+        <% } %>
       </section>
     </div>
     <section>
@@ -20,7 +20,14 @@
     <section class="byline">
       by &nbsp;<a href="http://twitter.com/searls">@searls</a>
     </section>
-    TODO - navigation
+    <section class="navigation">
+        <% if(site.newerPost(post)) { %>
+          <span class="newer"><a href="/<%= site.newerPost(post).htmlPath() %>">&#8672;&nbsp;newer</a></span>
+        <% } %>
+        <% if(site.olderPost(post)) { %>
+          <span class="older"><a href="/<%= site.olderPost(post).htmlPath() %>">older&nbsp;&#8674;</a></span>
+        <% } %>
+      </section>
     <section class="comments">
       <div id="disqus_thread"></div>
       <script type="text/javascript">
