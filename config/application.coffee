@@ -5,21 +5,32 @@
 # You can find the parent object in: node_modules/lineman/config/application.coffee
 #
 
+siteConfig =
+  author: "Justin Searls"
+  title: "searls"
+  url: "http://searls.testdouble.com"
+  disqus: "agile" #<-- just remove or comment this line to disable disqus support
+
+
+
+
 _ = require("underscore")
 lineman = require("lineman")
 
+# A little function to make it easy to swap named tasks in an array
 replaceTask = (search, replace, type = "common") ->
   _(lineman.config.application.appTasks[type]).tap (tasks) ->
     tasks[_(tasks).indexOf(search)] = replace
 
 module.exports = lineman.config.extend "application"
+
+  # Use grunt-markdown-blog in lieu of Lineman's built-in homepage task
   appTasks:
     common: replaceTask("homepage:dev", "markdown:dev", "common")
     dist: replaceTask("homepage:dist", "markdown:dist", "dist")
 
   markdown:
-    options:
-      title: "searls"
+    options: _(siteConfig).extend
       layouts:
         wrapper: "app/templates/wrapper.us"
         index: "app/templates/index.us"
