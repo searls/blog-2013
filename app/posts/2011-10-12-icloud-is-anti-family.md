@@ -26,7 +26,7 @@ Here are most of Apple's services and how we'd *like* to use them:
  | iCloud Photo Stream     | [y][x]        |               | No           |
  | iCloud Documents & Data | [y]           | [x]           | Yes          |
  | iCloud Find my Device   | [y]           | [x]           | Yes          |
- | iCloud Backup           | [y]           | [x]           | Yes (5GBx2!) |
+ | iCloud Backup           | [y]           | [x]           | Yes          |
  | Find my Friends         | [y]           | [x]           | Yes          |
  | iTunes Match            | [x][y]        |               | No           |
 
@@ -72,64 +72,6 @@ Regardless, it seems like the "right" way to resolve this problem would be for A
 
 Here's to hoping they agree.
 
-
-<div class="me-being-up-to-no-good">
-  <script type="text/javascript">
-    var convertSemanticGirlsAndBoys = function() {
-      $('article td').html(function(i,oldHtml) {
-        var newHtml = '';
-        newHtml += iconify(oldHtml,'[x]','her');
-        newHtml += iconify(oldHtml,'[y]','him');
-
-        return newHtml || oldHtml;
-      });
-    };
-
-    var iconify = function(source,code,klass) {
-      return source.indexOf(code) !== -1 ? '<span class="icon '+klass+'"></span>' : '';
-    };
-
-
-    var stripTrailingPipesFromMarkdownTables = function() {
-      $('article td:last-child').each(function(i,el) {
-        var text = $(el).text();
-        if(text.indexOf('|') !== -1) {
-          $(el).text(text.replace('|',''));
-        }
-        if(text.indexOf('Yes') !== -1 ) {
-          $(el).addClass('success');
-        }
-        if(text.indexOf('No') !== -1 ) {
-          $(el).addClass('failure');
-        }
-      });
-    };
-
-    (function($) {
-      convertSemanticGirlsAndBoys();
-      stripTrailingPipesFromMarkdownTables();
-    })(jQuery);
-  </script>
-  <style type="text/css">
-    .success {
-      color: #4E9600;
-      font-weight: bold;
-    }
-    .failure {
-      color: #A62500;
-      font-weight: bold;
-    }
-    .icon {
-      display: inline-block;
-      width: 16px;
-      height: 16px;
-    }
-    .her {
-      background: url('/img/user_female.png') no-repeat;
-    }
-
-    .him {
-      background: url('/img/user.png') no-repeat;
-    }
-  </style>
-</div>
+<script type="text/javascript">
+  postScripts.iCloudIsAntiFamily()
+</script>
