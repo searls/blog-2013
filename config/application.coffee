@@ -19,7 +19,7 @@ module.exports = lineman.config.extend "application"
 
   markdown:
     options:
-      title: "my blog"
+      title: "searls"
       layouts:
         wrapper: "app/templates/wrapper.us"
         index: "app/templates/index.us"

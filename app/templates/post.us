@@ -1,0 +1,35 @@
+<section class="body">
+  <article class="post">
+    <header>
+      <h1><a class="header-link" href="/<%= post.htmlPath() %>"><%= post.title() %></a><div class="permalink"><a href="/<%= post.htmlPath() %>"><span class="glyph">&#110;</span></a></div></h1>
+    </header>
+    <div class="temporal">
+      <span class="date"><%= post.date() %></span>
+      <section class="navigation">
+        <% /* if !post.first() { */ %>
+          <span class="newer"><a href="#newer-post">&#8672;&nbsp;newer</a></span>
+        <% /* } */ %>
+        <% /* if !post.last() { */ %>
+          <span class="older"><a href="#older-post">older&nbsp;&#8674;</a></span>
+        <% /* } */ %>
+      </section>
+    </div>
+    <section>
+      <%= post.content() %>
+    </section>
+    <section class="byline">
+      by &nbsp;<a href="http://twitter.com/searls">@searls</a>
+    </section>
+    TODO - navigation
+    <section class="comments">
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        window.disqus_identifier="";
+        window.disqus_url=window.location.origin+"/<%= post.htmlPath() %>";
+        window.disqus_title="<%= post.title() %>";
+      </script>
+      <script type="text/javascript" src="http://disqus.com/forums/agile/embed.js"></script>
+      <noscript><a href="http://agile.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+    </section>
+  </article>
+</section>

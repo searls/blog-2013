@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "lineman": "~0.4.6",
-    "grunt-markdown-blog": ">= 0.0.2"
+    "grunt-markdown-blog": ">= 0.0.2",
+    "underscore": "~>1.4.4"
   },
   "engines": {
     "node": "~>0.8.20",
