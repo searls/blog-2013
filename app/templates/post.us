@@ -1,3 +1,8 @@
+<%
+function convertToOldDisqusUrl(newUrl) {
+  return newUrl.replace(/posts\/(\d{4})-(\d{2})-(\d{2})-(.*).html/,"$1/$2/$3/$4\/");
+}
+%>
 <section class="body">
   <article class="post">
     <header>
@@ -29,14 +34,16 @@
         <% } %>
       </section>
     <section class="comments">
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-        window.disqus_identifier="";
-        window.disqus_url=window.location.origin+"/<%= post.htmlPath() %>";
-        window.disqus_title="<%= post.title() %>";
-      </script>
-      <script type="text/javascript" src="http://disqus.com/forums/agile/embed.js"></script>
-      <noscript><a href="http://agile.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+      <% if(site.disqus) { %>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          window.disqus_identifier="";
+          window.disqus_url="<%= convertToOldDisqusUrl(site.url+"/"+post.htmlPath()) %>";
+          window.disqus_title="<%= post.title() %>";
+        </script>
+          <script type="text/javascript" src="http://disqus.com/forums/<%= site.disqus %>/embed.js"></script>
+          <noscript><a href="http://<%= site.disqus %>.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+      <% } %>
     </section>
   </article>
 </section>
