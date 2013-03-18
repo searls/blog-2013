@@ -2,8 +2,9 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="<%= css %>" media="all" />
-    <!-- <link rel="alternate" type="application/atom+xml" title="<%= site.title %> - feed" href="/index.xml" /> -->
+    <link rel="alternate" type="application/rss+xml" title="<%= site.title %> - feed" href="/index.xml" />
     <!-- <link rel="alternate" type="application/rss+xml" title="searls" href="http://feeds.feedburner.com/searls" /> -->
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title><%= site.title %><%= post ? ' - '+post.title() : '' %></title>
 

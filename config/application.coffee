@@ -8,11 +8,10 @@
 siteConfig =
   author: "Justin Searls"
   title: "searls"
+  description: "the software blog of @searls"
   url: "http://searls.testdouble.com"
   disqus: "agile" #<-- just remove or comment this line to disable disqus support
-
-
-
+  rssCount: 10 #<-- remove, comment, or set to zero to disable RSS generation
 
 _ = require("underscore")
 lineman = require("lineman")
@@ -41,6 +40,7 @@ module.exports = lineman.config.extend "application"
         posts: "posts"
         index: "index.html"
         archive: "archive.html"
+        rss: "index.xml"
 
     dev:
       dest: "generated"
