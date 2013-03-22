@@ -2,8 +2,10 @@ Today, I had the good fortune to visit my friends at [Sparkbox](http://seesparkb
 
 Folks have been asking me to share a screencast of how I write Jasmine tests for a few years, so I recorded the session and am providing it online, completely unedited:
 
+<div class="hd-video">
 <div class="video-container">
-  <iframe width="560" height="315" src="http://www.youtube.com/embed/PWHyE1Ru4X0?rel=0" frameborder="0" allowfullscreen></iframe>
+  <iframe width="1280" height="720" src="http://www.youtube.com/embed/PWHyE1Ru4X0?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
 </div>
 
 This screencast is merely a conversation to provide an answer to the question, "Hey Justin, how would you write a test for ____ JavaScript code?" where that blank might be filled with "interacting with the DOM", or "binding user events", or "making AJAX requests". I cover each of those in a way that's similar to how I do it today; I trust that in six months, I'll have evolved and changed my tastes somewhat, but this reflects where I'm at right now.
