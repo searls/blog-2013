@@ -8,7 +8,7 @@ Folks have been asking me to share a screencast of how I write Jasmine tests for
 </div>
 </div>
 
-This screencast is merely a conversation to provide an answer to the question, "Hey Justin, how would you write a test for ____ JavaScript code?" where that blank might be filled with "interacting with the DOM", or "binding user events", or "making AJAX requests". I cover each of those in a way that's similar to how I do it today; I trust that in six months, I'll have evolved and changed my tastes somewhat, but this reflects where I'm at right now.
+This screencast ([YouTube](http://www.youtube.com/watch?v=PWHyE1Ru4X0)) is merely a conversation to provide an answer to the question, "Hey Justin, how would you write a test for ____ JavaScript code?" where that blank might be filled with "interacting with the DOM", or "binding user events", or "making AJAX requests". I cover each of those in a way that's similar to how I do it today; I trust that in six months, I'll have evolved and changed my tastes somewhat, but this reflects where I'm at right now.
 
 It's a pretty thorough stream of consciousness—in fact, it's nearly **feature-length**. That's pretty long for a web video, but if you've struggled to figure out how to write tests for real-world JavaScript (or, if you're just interested in getting inside the head of someone else on the topic), then perhaps 75 minutes will be a reasonable investment of your time.
 
