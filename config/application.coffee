@@ -10,8 +10,8 @@ siteConfig =
   title: "searls"
   description: "the software blog of @searls"
   url: "http://searls.testdouble.com"
-  disqus: "agile" #<-- just remove or comment this line to disable disqus support
   rssCount: 10 #<-- remove, comment, or set to zero to disable RSS generation
+  #disqus: "agile" #<-- just remove or comment this line to disable disqus support
 
 _ = require("underscore")
 lineman = require(process.env['LINEMAN_MAIN'])
