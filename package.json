@@ -8,7 +8,7 @@
     "company": "ACME, Inc."
   },
   "dependencies": {
-    "lineman": "~> 0.7",
+    "lineman": ">=0.8.2",
     "grunt-markdown-blog": ">= 0.0.5",
     "underscore": "~>1.4.4"
   }
